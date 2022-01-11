@@ -65,7 +65,7 @@ class Snapshot (round: Round? = null,val wins: Long = 0, private val losses: Lon
      * @param losses Tally of losses.
      */
     init {
-        rolls = ArrayList(round?.getRolls() ?: Collections.emptyList())
+        rolls = ArrayList(round?.rolls ?: Collections.emptyList())
         state = round?.state ?: Round.State.initial()
         win = round?.win ?: false
     }
